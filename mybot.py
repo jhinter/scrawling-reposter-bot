@@ -10,7 +10,7 @@ from modules.utils import get_new_session
 
 def main():
     session = get_new_session()
-    search_queries = ["voi", "lime"]
+    search_queries = ['voi', 'lime']
 
     for search_query in search_queries:
 

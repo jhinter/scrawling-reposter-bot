@@ -11,7 +11,7 @@ def post_new_articles():
             'message': 'New deal!',
             'link': article.get('link'),
         }
-        graph = facebook.GraphAPI(access_token="YOUR_TOKEN_HERE", version="3.1")
+        graph = facebook.GraphAPI(access_token='YOUR_TOKEN_HERE', version='3.1')
         
         api_request = graph.put_object(
             parent_object='YOUR_PAGE_HERE',

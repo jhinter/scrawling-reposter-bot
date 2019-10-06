@@ -30,17 +30,17 @@ def fetch_articles(session, search_query):
 def filter_articles(articles):
 
     # positive keywords, there has to be at least one
-    RELEVANT_KEYWORDS = ["scooter", "roller", "fahrt", "guthaben", "kostenlos"]
+    RELEVANT_KEYWORDS = ['scooter']
 
     # negative keywords that aren't allowed
-    IRRELEVANT_KEYWORDS = ["vm", "server", "helm", "training"]
+    IRRELEVANT_KEYWORDS = ['soda', 'juice']
 
     filtered_articles = []
 
     for article in articles:
 
         # making search case-insensitive
-        title = article["title"].lower()
+        title = article['title'].lower()
         relevant = False
 
         # check for positive keywords
