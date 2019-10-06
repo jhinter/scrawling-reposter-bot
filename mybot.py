@@ -4,12 +4,13 @@ sys.setdefaultencoding('utf8')
 
 import time
 from modules.scrape import fetch_articles, filter_articles
-from modules.utils import get_new_session, persist_new_articles
+from modules.persist import persist_new_articles
 from modules.post import post_new_articles
+from modules.utils import get_new_session
 
 def main():
     session = get_new_session()
-    search_queries = ["voi", "tier", "lime", "circ"]
+    search_queries = ["voi", "lime"]
 
     for search_query in search_queries:
 
