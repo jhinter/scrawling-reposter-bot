@@ -1,8 +1,6 @@
 import requests
-import pprint
 from bs4 import BeautifulSoup
 from bs4 import SoupStrainer
-from classes import article
 
 def fetch_articles(session, search_query):
 
@@ -15,28 +13,17 @@ def fetch_articles(session, search_query):
     articles = response.select('article div.threadGrid')
     articles_objects = []
 
-    # limits number of articles
-    MAX_ARTICLES_COUNTER = 3
-
     for article in articles:
 
-        title = article.select(
-            'div.threadGrid-title .thread-title a')[0]['title']
+        title = article.select('div.threadGrid-title .thread-title a')[0]['title']
         description = article.select('div.cept-description-container')[0].text
-        link = article.select(
-            'div.threadGrid-title .thread-title a')[0]['href']
+        link = article.select('div.threadGrid-title .thread-title a')[0]['href']
 
-        articles_objects.append(
-            {
-                'title': title,
-                'description': description,
-                'link': link,
-            }
-        )
-
-        MAX_ARTICLES_COUNTER -= 1
-        if MAX_ARTICLES_COUNTER == 0:
-            break
+        articles_objects.append({
+            'title': title,
+            'description': description,
+            'link': link,
+        })
 
     return articles_objects
 
