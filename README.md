@@ -1,6 +1,6 @@
 # About
 
-I wrote an comprehensive article about this repo on Medium.com
+I wrote an article about this repo on medium.com
 
 Please check it out here: https://medium.com/p/54e88b3ebd42
 
