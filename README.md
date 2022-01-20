@@ -16,7 +16,7 @@ Please check it out here: https://medium.com/p/54e88b3ebd42
 > sudo python get-pip.py
 
 ### Dependencies
-> sudo pip install requests beautifulsoup4 collective.soupstrainer tinydb
+> sudo pip install requests beautifulsoup4 collective.soupstrainer tinydb lxml
 
 
 # Starting the bot
